@@ -10,6 +10,7 @@ local Tab = Window:NewTab("Teleport")
 local TeleportSection = Tab:NewSection("Teleport")
 MainSection:NewToggle("Auto Exp i gues", "ToggleInfo", function(state)
     if state then
+local Bitches = tostring(game.Players.LocalPlayer.Name)        
         _G.s = true
 while _G.s do
     wait()
@@ -24,15 +25,13 @@ local args = {
     [1] = "MeteorSmash"
 }
 
-workspace.Packets.PacketEvent_trolo2014:FireServer(unpack(args))
+workspace.Packets.PacketEvent_[""..Bitches]:FireServer(unpack(args))
 
 local args = {
     [1] = "Combat"
 }
 
-workspace.Packets.PacketEvent_trolo2014:FireServer(unpack(args))
-
-
+workspace.Packets.PacketEvent_[""..Bitches]:FireServer(unpack(args))
 end
     else
         _G.s = false
@@ -46,7 +45,7 @@ MainSection:NewToggle("auto wishing power", "sex", function(state)
 while _G.Wish do
     wait(1)
     spawn(function()
-if game:GetService("Players").trolo2014.PlayerGui.GameplayGui.Wishes.Summon.Visible == true then
+if game:GetService("Players").LocalPlayer.PlayerGui.GameplayGui.Wishes.Summon.Visible == true then
 local args = {[1] = "Summon"}
 game:GetService("ReplicatedStorage").FilteringEnabled.Events.Shenron:FireServer(unpack(args))
 local args = {[1] = "Power"}
@@ -61,7 +60,7 @@ end)
 
 MainSection:NewToggle("Dragon Balls Collecting", "sex", function(state)
     if state then
-game:GetService("Players").trolo2014.PlayerGui.GameplayGui.Notice:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.GameplayGui.Notice:Destroy()
 _G.DragonBalls = true
 while _G.DragonBalls do
 wait(0.2)
@@ -119,7 +118,7 @@ MainSection:NewToggle("Auto Usage ki", "sex", function(state)
         _G.Soda = true
         while _G.Soda do
             wait()
-            if game:GetService("Players").trolo2014.PlayerGui.GameplayGui.Status.Ki.Label.Text == '50/1300' then
+            if game:GetService("Players").LocalPlayer.PlayerGui.GameplayGui.Status.Ki.Label.Text == '50/1300' then
     game:GetService("ReplicatedStorage").FilteringEnabled.Events.zSoda:FireServer()
     end
     end
