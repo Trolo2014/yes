@@ -1,7 +1,7 @@
 repeat wait() until game:IsLoaded()
 if game.PlaceId == 258986981 then
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("OG dragon ball game", "Synapse")
+local Window = Library.CreateLib("OG dragon ball game", "Serpent")
 local Tab = Window:NewTab("Main")
 local MainSection = Tab:NewSection("Main")
 local Tab = Window:NewTab("Food")
