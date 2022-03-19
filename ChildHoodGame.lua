@@ -4,6 +4,8 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("OG dragon ball game", "Synapse")
 local Tab = Window:NewTab("Main")
 local MainSection = Tab:NewSection("Main")
+local Tab = Window:NewTab("Food")
+local FoodSection = Tab:NewSection("Food")
 MainSection:NewToggle("Auto Exp i gues", "ToggleInfo", function(state)
     if state then
         _G.s = true
@@ -110,7 +112,6 @@ end
     end
 end)
 
-
 MainSection:NewToggle("Auto Usage ki", "sex", function(state)
     if state then
         _G.Soda = true
@@ -124,6 +125,45 @@ MainSection:NewToggle("Auto Usage ki", "sex", function(state)
      _G.Soda = false
     end
 end)
+MainSection:NewButton("Requared For Autofarm", "yes", function()
+local noclip = true
+G = game
+char = G.Players.LocalPlayer.Character
+repeat
+if noclip == true then
+for _,v in pairs(char:children()) do
+pcall(function()
+if v.className == "Part" then
+v.CanCollide = false
+elseif v.ClassName == "Model" then
+v.Head.CanCollide = false
 end
+end)
+end
+end
+G:service("RunService").Stepped:wait()
+until char.Humanoid.Health == 0
+end)
+
+FoodSection:NewTextBox("Soda", "write ammount", function(txt)
+for i = 1,(txt) do
+local args = {[1] = "Soda"}
+game:GetService("ReplicatedStorage").FilteringEnabled.Events.ChatHero:FireServer(unpack(args))
+end
+end)
+FoodSection:NewTextBox("Meat", "write ammount", function(txt)
+for i = 1,(txt) do
+local args = {[1] = "Meat"}
+game:GetService("ReplicatedStorage").FilteringEnabled.Events.ChatHero:FireServer(unpack(args))
+end
+end)
+FoodSection:NewTextBox("AppleJuice", "write ammount", function(txt)
+for i = 1,(txt) do
+local args = {[1] = "AppleJuice"}
+game:GetService("ReplicatedStorage").FilteringEnabled.Events.ChatHero:FireServer(unpack(args))
+end
+end)
+end
+
 
 
