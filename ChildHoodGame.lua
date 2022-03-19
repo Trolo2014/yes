@@ -6,6 +6,8 @@ local Tab = Window:NewTab("Main")
 local MainSection = Tab:NewSection("Main")
 local Tab = Window:NewTab("Food")
 local FoodSection = Tab:NewSection("Food")
+local Tab = Window:NewTab("Teleport")
+local TeleportSection = Tab:NewSection("Teleport")
 MainSection:NewToggle("Auto Exp i gues", "ToggleInfo", function(state)
     if state then
         _G.s = true
@@ -163,6 +165,37 @@ local args = {[1] = "AppleJuice"}
 game:GetService("ReplicatedStorage").FilteringEnabled.Events.ChatHero:FireServer(unpack(args))
 end
 end)
+TeleportSection:NewButton("Captain Ginyu", "sex?", function()
+ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Captain Ginyu (?)"].Torso.CFrame
+end)
+TeleportSection:NewButton("Frieza", "sex?", function()
+ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Frieza (?)"].Torso.CFrame
+end)
+TeleportSection:NewButton("Jiren", "sex?", function()
+ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Jiren (?)"].Torso.CFrame
+end)
+TeleportSection:NewButton("Cell", "sex?", function()
+ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Cell (?)"].Torso.CFrame
+end)
+TeleportSection:NewButton("Goku Black", "sex?", function()
+ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Goku Black (?)"].Torso.CFrame
+end)
+TeleportSection:NewButton("Kid Gohan", "sex?", function()
+ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Kid Gohan (?)"].Torso.CFrame
+end)
+TeleportSection:NewButton("Vegeta", "sex?", function()
+ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Vegeta (?)"].Torso.CFrame
+end)
+TeleportSection:NewButton("Krillin", "sex?", function()
+ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Krillin (?)"].Torso.CFrame
+end)
+TeleportSection:NewButton("Broly", "sex?", function()
+ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Broly (?)"].Torso.CFrame
+end)
+TeleportSection:NewButton("Kid Buu", "sex?", function()
+ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace")["Kid Buu (?)"].Torso.CFrame
+end)
+
 end
 
 
