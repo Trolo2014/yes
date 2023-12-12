@@ -1,1 +1,1 @@
-_G.RatList = {1451525339}
+_G.RatList = {}
